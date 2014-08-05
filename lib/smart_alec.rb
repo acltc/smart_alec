@@ -12,7 +12,7 @@ module SmartAlec
         weather = SmartAlec::Weather.new(option)
         puts "The current temperature in #{option.capitalize} is #{weather.fahrenheit} degrees fahrenheit."
       elsif command == "stock"
-        stock = SmartAlec::Stock(option)
+        stock = SmartAlec::Stock.new(option)
         puts "The realtime bid for #{option.upcase} is $#{stock.current_price}."
       else
         puts "Alec doesn't understand that command."
