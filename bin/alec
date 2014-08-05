@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative "../lib/smart_alec/robot"
+require_relative "../lib/smart_alec"
 
 
 command = ARGV[0]
