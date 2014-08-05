@@ -3,9 +3,9 @@ require 'stock_quote'
 
 module SmartAlec
   class Robot
-    def do_task(command, option)
+    def do_task(command, option=nil)
       if command == "time"
-        puts "The date and time currently is: " + Time.now.strftime("%A, %B %d %Y %l:%M %p")
+        puts CurrentTime.new.get
       elsif command == "weather"
         weather_info = OpenWeather::Current.city(option)
         temp = ((weather_info["main"]["temp"].to_f - 273.15) * 1.8 + 32).round(2)
